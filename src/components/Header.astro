@@ -1,0 +1,38 @@
+<header>
+  <span>&lt;Fk <span class="color-diagonal">/</span>&gt;</span>
+  <ul>
+    <li><a href="#presentation">Inicio</a></li>
+    <li><a href="#">Proyectos</a></li>
+    <li><a href="#">TODO</a></li>
+  </ul>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff33;
+    color: #fff;
+    min-height: 80px;
+    padding: 0 40px;
+    font-size: 1.2rem;
+    position: sticky;
+    backdrop-filter: blur(10px);
+    top: 0;
+    & span {
+      font-weight: bold;
+      font-size: 2rem;
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+  }
+  .color-diagonal {
+    color: var(--secondary);
+  }
+</style>

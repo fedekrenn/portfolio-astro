@@ -2,19 +2,67 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Bienvenidos a mi portfolio">
+<Layout title="Federico Krenn | Frontend Developer">
   <main>
-    <h1>Portfolio - Federico Krenn</h1>
+    <section class="presentation" id="presentation">
+      <div>
+        <h1>Federico Krenn</h1>
+        <h2>Frontend Developer</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium
+          animi aspernatur dolorum, ea mollitia eos distinctio quia quam et id.
+          Itaque, ratione sequi tempore nostrum nulla modi quos! Suscipit,
+          voluptas?
+        </p>
+      </div>
+      <div>
+        <img
+          src="https://picsum.photos/250"
+          alt="Imagen de perfil de Federico Krenn | Frontend developer"
+        />
+      </div>
+    </section>
   </main>
 </Layout>
 
 <style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    max-width: 1024px;
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
+  h1 {
+    font-size: 2em;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 1.4em;
+    font-weight: 400;
+    &::before {
+      content: "👨‍💻";
+      margin-right: 10px;
+    }
+  }
+  .presentation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    & div {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 70vh;
+      gap: 20px;
+    }
+    & div:last-child {
+      flex: 1;
+      align-items: center;
+    }
+  }
+  p {
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+
+  img {
+    border-radius: 50%;
   }
 </style>

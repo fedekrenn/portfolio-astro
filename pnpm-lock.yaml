@@ -2,13 +2,13 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@astrojs/check':
-    specifier: ^0.3.2
+    specifier: 0.3.2
     version: 0.3.2(typescript@5.3.3)
   astro:
-    specifier: ^4.0.4
+    specifier: 4.0.4
     version: 4.0.4(typescript@5.3.3)
   typescript:
-    specifier: ^5.3.3
+    specifier: 5.3.3
     version: 5.3.3
 
 packages:
