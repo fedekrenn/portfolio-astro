@@ -1,0 +1,41 @@
+---
+import github from "../assets/icons/github.svg";
+import linkedin from "../assets/icons/linkedin.svg";
+---
+
+<footer>
+  <ul>
+    <li>
+      <a href="https://github.com/fedekrenn" target="_blank">
+        <img src={github.src} alt="Github logo" />
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/fkrenn/" target="_blank">
+        <img src={linkedin.src} alt="LinkedIn logo" />
+      </a>
+    </li>
+  </ul>
+</footer>
+
+<style>
+  footer {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+</style>
