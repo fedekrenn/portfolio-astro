@@ -1,11 +1,27 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Contact from "../components/Contact.astro";
+import Experience from "../components/Experience.astro";
+import Proyects from "../components/Proyects.astro";
+import nombre from "../utils/experience.json";
+import type { Accumulator } from "../utils/types";
+
+const { experience, proyects } = nombre.data.reduce<Accumulator>(
+  (acc, el) => {
+    if (el.real) {
+      acc.experience.push(el);
+    } else {
+      acc.proyects.push(el);
+    }
+    return acc;
+  },
+  { experience: [], proyects: [] }
+);
 ---
 
 <Layout title="Federico Krenn | Frontend Developer">
   <main>
-    <section class="presentation" id="presentation">
+    <section id="presentation">
       <div>
         <h1>Federico Krenn</h1>
         <h2>Frontend Developer</h2>
@@ -23,7 +39,9 @@ import Contact from "../components/Contact.astro";
         />
       </div>
     </section>
-    <Contact>
+    <Experience experience={experience} />
+    <Proyects proyects={proyects} />
+    <Contact />
   </main>
 </Layout>
 
@@ -41,24 +59,27 @@ import Contact from "../components/Contact.astro";
       margin-right: 10px;
     }
   }
-  .presentation {
+  section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    & div {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      min-height: 70vh;
-      gap: 20px;
-    }
-    & div:last-child {
-      flex: 1;
-      align-items: center;
-    }
   }
+
+  div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 70vh;
+    gap: 20px;
+  }
+
+  div:last-child {
+    flex: 1;
+    align-items: center;
+  }
+
   p {
     font-size: 0.9em;
     line-height: 1.5;

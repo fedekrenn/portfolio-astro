@@ -13,5 +13,11 @@
     "@astrojs/check": "0.3.2",
     "astro": "4.0.4",
     "typescript": "5.3.3"
+  },
+  "devDependencies": {
+    "standard": "17.1.0"
+  },
+  "eslintConfig": {
+    "extends": "standard"
   }
 }
