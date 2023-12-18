@@ -1,4 +1,3 @@
-
 ---
 import type { Project } from "../utils/types";
 
@@ -9,14 +8,14 @@ interface Props {
 const { proyects } = Astro.props;
 ---
 
-<section>
+<section id="proyects">
   <h2>Proyectos personales</h2>
   <div>
     {
       proyects.map((project) => (
-        <article>
+        <article class={`card-${project.id}`}>
           <h3>{project.title}</h3>
-          <img src={`./imgs/${project.image}`} alt="">
+          <img src={`./images/${project.image}`} alt="" />
         </article>
       ))
     }
@@ -24,6 +23,50 @@ const { proyects } = Astro.props;
 </section>
 
 <style>
+  div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas:
+      "krennflix restaurante bikeStore"
+      "krennflix regalos apiRestBiblioteca"
+      "curriculum apiRestEcommerce apiRestEcommerce";
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  .card-4 {
+    grid-area: restaurante;
+  }
+
+  .card-5 {
+    grid-area: krennflix;
+    & img {
+      object-position: -302px;
+    }
+  }
+
+  .card-6 {
+    grid-area: bikeStore;
+  }
+
+  .card-7 {
+    grid-area: apiRestEcommerce;
+  }
+
+  .card-8 {
+    grid-area: regalos;
+  }
+
+  .card-9 {
+    grid-area: apiRestBiblioteca;
+    filter: brightness(0.9) contrast(1.1);
+  }
+
+  .card-10 {
+    grid-area: curriculum;
+  }
+
   section {
     margin: 40px 0;
   }
@@ -43,23 +86,15 @@ const { proyects } = Astro.props;
     color: white;
     font-size: 1.3rem;
     text-align: center;
-  }
-
-  div {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-area: 'proyects';
-    grid-gap: 1rem;
-    margin: 20px 0;
+    z-index: 99;
   }
 
   article {
-    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border-radius: 20px;
+    border-radius: 15px;
     position: relative;
     overflow: hidden;
   }
@@ -68,11 +103,11 @@ const { proyects } = Astro.props;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 20px;
     transition: all 0.3s ease;
   }
 
-  article:hover img {
+  img:hover {
     transform: scale(1.1);
+    filter: brightness(1.1) contrast(1.1);
   }
 </style>

@@ -41,7 +41,7 @@
     },
     {
       "id": 4,
-      "title": "Recetas de cocina",
+      "title": "Gestión de restaurantes",
       "client": "Proyecto personal",
       "real": false,
       "description": "Webapp permite administrar un modelo de negocio de restaurante y allí poder consultar, crear, modificar y eliminar recetas de cocina, cociner@s, restaurantes (de por ejemplo una red de partners) y proveedores. Cuenta con un registro para que los usuarios puedan hacer CRUD de los modelos.",
@@ -50,7 +50,7 @@
       "stack": "Fullstack",
       "deploy": null,
       "repository": "https://github.com/fedekrenn/django-mvt-cocina",
-      "image": "TODO"
+      "image": "4-django.JPG"
     },
     {
       "id": 5,
@@ -115,24 +115,11 @@
       "stack": "Backend",
       "deploy": null,
       "repository": "https://github.com/fedekrenn/library-api",
-      "image": "TODO"
+      "image": "9-library-api.JPG"
     },
     {
       "id": 10,
-      "title": "Juego Bingo",
-      "client": "Proyecto personal",
-      "real": false,
-      "description": "Juego online del popular juego de Bingo donde podrás competir contra la PC y contra uno mismo a través del registro de mayor puntaje.",
-      "date": "Marzo 2022",
-      "tecnologies": ["JavaScript"],
-      "stack": "Frontend",
-      "deploy": "https://fedekrenn.github.io/simulador-bingo/",
-      "repository": "https://github.com/fedekrenn/simulador-bingo",
-      "image": "10-bingo.JPG"
-    },
-    {
-      "id": 11,
-      "title": "Proyecto Fullstack - CV editable",
+      "title": "CV editable",
       "client": "Proyecto personal",
       "real": false,
       "description": "Proyecto fullstack para crear un CV online. El objetivo es que cada usuario pueda crear su CV, agregarlo, eliminarlo, modificarlo y compartirlo.",
@@ -141,7 +128,7 @@
       "stack": "Fullstack",
       "deploy": null,
       "repository": "https://github.com/fedekrenn/Portfolio-AP-Backend",
-      "image": "11-cv-fullstack.JPG"
+      "image": "10-cv-fullstack.JPG"
     }
   ]
 }
