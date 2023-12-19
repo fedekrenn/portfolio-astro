@@ -1,28 +1,18 @@
 ---
+import Card from "./Card.astro";
 import type { Project } from "../utils/types";
 
 interface Props {
-  experience: Project[];
+  experiences: Project[];
 }
 
-const { experience } = Astro.props;
+const { experiences } = Astro.props;
 ---
 
 <section>
   <h2>Experiencia</h2>
   <div>
-    {
-      experience.map((project) => (
-        <article>
-          <h3>{project.title}</h3>
-          <p>{project.description}</p>
-          <img
-            src={`./images/${project.image}`}
-            alt={`Imagen del proyecto: ${project.title}`}
-          />
-        </article>
-      ))
-    }
+    {experiences.map((experience) => <Card {experience} />)}
   </div>
 </section>
 
@@ -36,29 +26,11 @@ const { experience } = Astro.props;
     margin: 20px 0;
   }
 
-  h3 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
   div {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: 500px;
     grid-gap: 1rem;
     margin: 20px 0;
-  }
-
-  article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 15px;
   }
 </style>

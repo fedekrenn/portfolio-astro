@@ -75,6 +75,21 @@
     outline: 2px solid rgb(235, 89, 89);
   }
 
+  input[type="submit"], input[type="reset"] {
+    width: 40%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+  }
+
   div {
     display: flex;
     justify-content: space-around;

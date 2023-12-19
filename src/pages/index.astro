@@ -6,16 +6,16 @@ import Proyects from "../components/Proyects.astro";
 import nombre from "../utils/experience.json";
 import type { Accumulator } from "../utils/types";
 
-const { experience, proyects } = nombre.data.reduce<Accumulator>(
+const { experiences, proyects } = nombre.data.reduce<Accumulator>(
   (acc, el) => {
     if (el.real) {
-      acc.experience.push(el);
+      acc.experiences.push(el);
     } else {
       acc.proyects.push(el);
     }
     return acc;
   },
-  { experience: [], proyects: [] }
+  { experiences: [], proyects: [] }
 );
 ---
 
@@ -39,8 +39,8 @@ const { experience, proyects } = nombre.data.reduce<Accumulator>(
         />
       </div>
     </section>
-    <Experience experience={experience} />
-    <Proyects proyects={proyects} />
+    <Experience {experiences} />
+    <Proyects {proyects} />
     <Contact />
   </main>
 </Layout>
@@ -63,7 +63,6 @@ const { experience, proyects } = nombre.data.reduce<Accumulator>(
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
   }
 
   div {

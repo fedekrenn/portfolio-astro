@@ -13,6 +13,6 @@ export interface Project {
 }
 
 export interface Accumulator {
-  experience: Project[];
+  experiences: Project[];
   proyects: Project[];
 }

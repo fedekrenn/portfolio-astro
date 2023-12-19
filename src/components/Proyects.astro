@@ -12,10 +12,10 @@ const { proyects } = Astro.props;
   <h2>Proyectos personales</h2>
   <div>
     {
-      proyects.map((project) => (
-        <article class={`card-${project.id}`}>
-          <h3>{project.title}</h3>
-          <img src={`./images/${project.image}`} alt="" />
+      proyects.map(({ id, title, image }) => (
+        <article class={`card-${id}`}>
+          <h3>{title}</h3>
+          <img src={`./images/${image}`} alt="" />
         </article>
       ))
     }
@@ -97,6 +97,7 @@ const { proyects } = Astro.props;
     border-radius: 15px;
     position: relative;
     overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
   }
 
   img {
