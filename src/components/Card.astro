@@ -6,18 +6,21 @@ interface Props {
 }
 
 const { experience } = Astro.props;
-const { title, description, image, tecnologies, date } = experience;
+const { title, description, image, tecnologies, date, stack } = experience;
 ---
 
 <article>
   <h3>{title}</h3>
   <hr />
+  <div class="data-container">
+    <time>{date}</time>
+    <span class="stack">{stack}</span>
+  </div>
   <img src={`./images/${image}`} alt={`Imagen del proyecto: ${title}`} />
   <p>{description.substring(0, 200)}...</p>
   <div class="tags-container">
     {tecnologies.map((tecnology) => <span>{tecnology}</span>)}
   </div>
-  <time>{date}</time>
 </article>
 
 <style>
@@ -34,7 +37,7 @@ const { title, description, image, tecnologies, date } = experience;
 
   h3 {
     font-size: 1.1em;
-    font-weight: 400;
+    font-weight: bold;
     text-align: center;
   }
 
@@ -43,13 +46,34 @@ const { title, description, image, tecnologies, date } = experience;
     margin: 10px 0;
   }
 
+  .data-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  time {
+    font-size: 0.6em;
+  }
+
+  .stack {
+    font-size: 0.6em;
+    background-color: rgb(86, 219, 86);
+    color: black;
+    border-radius: 5px;
+    padding: 0 5px;
+    /* margin: 5px; */
+    text-transform: capitalize;
+  }
+
   img {
     width: 100%;
     height: 180px;
     max-width: 300px;
     object-fit: cover;
     zoom: 1.8;
-    margin: 10px 0;
+    margin: 5px 0 10px 0;
   }
 
   p {
