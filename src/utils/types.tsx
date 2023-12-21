@@ -6,6 +6,7 @@ export interface Project {
   description: string;
   date: string;
   tecnologies: string[];
+  newTool: string;
   stack: string;
   deploy: string | null;
   repository: string;

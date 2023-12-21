@@ -6,22 +6,24 @@ interface Props {
 }
 
 const { experience } = Astro.props;
-const { title, description, image, tecnologies, date, stack } = experience;
+const { id, title, description, image, tecnologies, date, stack } = experience;
 ---
 
-<article>
-  <h3>{title}</h3>
-  <hr />
-  <div class="data-container">
-    <time>{date}</time>
-    <span class="stack">{stack}</span>
-  </div>
-  <img src={`./images/${image}`} alt={`Imagen del proyecto: ${title}`} />
-  <p>{description.substring(0, 200)}...</p>
-  <div class="tags-container">
-    {tecnologies.map((tecnology) => <span>{tecnology}</span>)}
-  </div>
-</article>
+<a href={`/experience/${id}`}>
+  <article>
+    <h3>{title}</h3>
+    <hr />
+    <div class="data-container">
+      <time>{date}</time>
+      <span class="stack">{stack}</span>
+    </div>
+    <img src={`./images/${image}`} alt={`Imagen del proyecto: ${title}`} />
+    <p>{description.substring(0, 200)}...</p>
+    <div class="tags-container">
+      {tecnologies.map((tecnology) => <span>{tecnology}</span>)}
+    </div>
+  </article>
+</a>
 
 <style>
   article {
@@ -63,13 +65,12 @@ const { title, description, image, tecnologies, date, stack } = experience;
     color: black;
     border-radius: 5px;
     padding: 0 5px;
-    /* margin: 5px; */
     text-transform: capitalize;
   }
 
   img {
     width: 100%;
-    height: 180px;
+    height: 110px;
     max-width: 300px;
     object-fit: cover;
     zoom: 1.8;
@@ -84,7 +85,8 @@ const { title, description, image, tecnologies, date, stack } = experience;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 10px 0;
+    gap: 10px;
+    margin: 16px 0 0 0;
   }
 
   span {
@@ -92,7 +94,6 @@ const { title, description, image, tecnologies, date, stack } = experience;
     background-color: var(--secondary);
     border-radius: 15px;
     padding: 1px 8px;
-    margin: 5px;
     text-transform: capitalize;
   }
 </style>

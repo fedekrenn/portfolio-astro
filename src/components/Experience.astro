@@ -9,7 +9,7 @@ interface Props {
 const { experiences } = Astro.props;
 ---
 
-<section>
+<section id="experience" class="sub-section">
   <h2>Experiencia</h2>
   <div>
     {experiences.map((experience) => <Card {experience} />)}
@@ -18,12 +18,7 @@ const { experiences } = Astro.props;
 
 <style>
   section {
-    margin: 40px 0;
-  }
-
-  h2 {
-    font-size: 2rem;
-    margin: 20px 0;
+    margin: 0;
   }
 
   div {
