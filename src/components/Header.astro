@@ -40,6 +40,14 @@
     animation: changeColor linear both;
     animation-timeline: scroll(root);
     animation-range: 0 300px;
+    li {
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+  }
+
+  li:hover {
+    color: var(--secondary);
   }
 
   .color-diagonal {

@@ -17,7 +17,7 @@ const { id, title, description, image, tecnologies, date, stack } = experience;
       <time>{date}</time>
       <span class="stack">{stack}</span>
     </div>
-    <img src={`./images/${image}`} alt={`Imagen del proyecto: ${title}`} />
+    <img src={`./images/${image}`} alt={`Imagen del proyecto: ${title}`} loading="lazy" />
     <p>{description.substring(0, 200)}...</p>
     <div class="tags-container">
       {tecnologies.map((tecnology) => <span>{tecnology}</span>)}
@@ -31,6 +31,7 @@ const { id, title, description, image, tecnologies, date, stack } = experience;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
     padding: 1rem;
     border-radius: 15px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
@@ -38,6 +39,12 @@ const { id, title, description, image, tecnologies, date, stack } = experience;
     animation: changeOpacity linear both;
     animation-timeline: view();
     animation-range: entry 20% cover 30%;
+    transition: all 0.3s ease-in-out;
+  }
+
+  article:hover {
+    box-shadow: 1px 1px 15px #3f50eb52;
+    transform: scale(1.01);
   }
 
   h3 {
@@ -82,6 +89,7 @@ const { id, title, description, image, tecnologies, date, stack } = experience;
 
   p {
     font-size: 0.7em;
+    text-wrap: pretty;
   }
 
   .tags-container {

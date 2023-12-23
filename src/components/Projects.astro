@@ -16,7 +16,7 @@ const { proyects } = Astro.props;
         <article class={`card-${id}`}>
           <a href={`/project/${id}`}>
             <h3>{title}</h3>
-            <img src={`./images/${image}`} alt="" />
+            <img src={`./images/${image}`} alt="" loading="lazy" />
           </a>
         </article>
       ))
