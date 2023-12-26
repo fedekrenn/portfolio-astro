@@ -3,20 +3,6 @@ import Layout from "../layouts/Layout.astro";
 import Contact from "../components/Contact.astro";
 import Experience from "../components/Experience.astro";
 import Proyects from "../components/Projects.astro";
-import nombre from "../utils/experience.json";
-import type { Accumulator } from "../utils/types";
-
-const { experiences, proyects } = nombre.data.reduce<Accumulator>(
-  (acc, el) => {
-    if (el.real) {
-      acc.experiences.push(el);
-    } else {
-      acc.proyects.push(el);
-    }
-    return acc;
-  },
-  { experiences: [], proyects: [] }
-);
 ---
 
 <Layout title="Federico Krenn | Frontend Developer">
@@ -36,14 +22,13 @@ const { experiences, proyects } = nombre.data.reduce<Accumulator>(
           animi aspernatur dolorum, ea mollitia eos distinctio quia quam et id.
         </p>
       </div>
-        <img
-          src="https://picsum.photos/250"
-          alt="Imagen de perfil de Federico Krenn | Frontend developer"
-        />
-      </div>
+      <img
+        src="https://picsum.photos/250"
+        alt="Imagen de perfil de Federico Krenn | Frontend developer"
+      />
     </section>
-    <Experience {experiences} />
-    <Proyects {proyects} />
+    <Experience/>
+    <Proyects />
     <Contact />
   </main>
 </Layout>
@@ -70,7 +55,7 @@ const { experiences, proyects } = nombre.data.reduce<Accumulator>(
   }
 
   #presentation {
-    min-height: 100vh
+    min-height: 100vh;
   }
 
   div {

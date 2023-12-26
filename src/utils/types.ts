@@ -2,7 +2,6 @@ export interface Project {
   id: number;
   title: string;
   client: string;
-  real: boolean;
   description: string;
   date: string;
   tecnologies: string[];
@@ -13,7 +12,3 @@ export interface Project {
   image: string;
 }
 
-export interface Accumulator {
-  experiences: Project[];
-  proyects: Project[];
-}

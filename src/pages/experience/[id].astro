@@ -1,5 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { getById } from "../../utils/getData";
+import type { Project } from "../../utils/types";
 
 export function getStaticPaths() {
   return [
@@ -10,11 +12,17 @@ export function getStaticPaths() {
 }
 
 const { id } = Astro.params;
+
+const experience: Project = getById(Number(id));
+
+const { title, description, image } = experience;
 ---
 
-<Layout title={`Proyecto ID: ${id} | Frontend Developer`}>
+<Layout title={`${title} | Federico Krenn`}>
   <main>
-    <h1>Post {id}</h1>
+    <h1>{title}</h1>
+    <p>{description}</p>
+    <img src={`/images/${image}`} alt={title} />
   </main>
 </Layout>
 

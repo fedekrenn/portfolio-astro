@@ -1,22 +1,20 @@
 ---
-import type { Project } from "../utils/types";
-
-interface Props {
-  proyects: Project[];
-}
-
-const { proyects } = Astro.props;
+import { getProjects } from "../utils/getData";
 ---
 
 <section id="projects" class="sub-section">
   <h2>Proyectos personales</h2>
   <div>
     {
-      proyects.map(({ id, title, image }) => (
+      getProjects().map(({ id, title, image }) => (
         <article class={`card-${id}`}>
           <a href={`/project/${id}`}>
             <h3>{title}</h3>
-            <img src={`./images/${image}`} alt="" loading="lazy" />
+            <img
+              src={`./images/${image}`}
+              alt={`Proyecto ${title}`}
+              loading="lazy"
+            />
           </a>
         </article>
       ))

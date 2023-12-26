@@ -1,18 +1,13 @@
 ---
 import Card from "./Card.astro";
+import { getExperience } from "../utils/getData";
 import type { Project } from "../utils/types";
-
-interface Props {
-  experiences: Project[];
-}
-
-const { experiences } = Astro.props;
 ---
 
 <section id="experience" class="sub-section">
   <h2>Experiencia</h2>
   <div>
-    {experiences.map((experience) => <Card {experience} />)}
+    {getExperience().map((experience: Project) => <Card {experience} />)}
   </div>
 </section>
 
