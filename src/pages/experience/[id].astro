@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import { getById } from "../../utils/getData";
 import type { Project } from "../../utils/types";
+import Page from "../../components/Page.astro";
 
 export function getStaticPaths() {
   return [
@@ -14,114 +15,8 @@ export function getStaticPaths() {
 const { id } = Astro.params;
 
 const experience: Project = getById(Number(id));
-
-const {
-  title,
-  description,
-  image,
-  client,
-  date,
-  deploy,
-  repository,
-  newTool,
-  stack,
-  tecnologies,
-} = experience;
 ---
 
-<Layout title={`${title} | Federico Krenn`}>
-  <main>
-    <h1>{title}</h1>
-    <figure>
-      <img src={`/images/${image}`} alt={title} />
-      <figcaption>
-        <p>
-          <strong>Desarrollado para: </strong>
-          {client}
-        </p>
-        <p>
-          <strong>Fecha:</strong>
-          {date}
-        </p>
-      </figcaption>
-    </figure>
-    <div class="btn-container">
-      <a class="btn" href={deploy} target="_blank">Deploy</a>
-      <a class="btn" href={repository} target="_blank">Repositorio</a>
-    </div>
-    <hr>
-    <p>{description}</p>
-  </main>
+<Layout title={`${experience.title} | Federico Krenn`}>
+  <Page {experience} />
 </Layout>
-
-<style>
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 80px;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    background: linear-gradient(45deg, var(--secondary), #e4e4d9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 50px 0;
-  }
-
-  figcaption {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    font-size: .7em;
-    color: #ffffffcb;
-    margin-top: 5px;
-  }
-
-  strong {
-    font-weight: 700;
-  }
-
-  img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 10px;
-  }
-
-  .btn-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    margin: 30px 0;
-  }
-
-  .btn {
-    text-align: center;
-    width: 150px;
-  }
-
-  hr {
-    width: 100%;
-    max-width: 600px;
-    border: none;
-    border-bottom: 1px solid #e4e4d9;
-    margin: 20px 0 50px 0;
-  }
-
-  p {
-    font-weight: 400;
-  }
-</style>
