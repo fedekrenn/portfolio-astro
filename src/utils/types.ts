@@ -11,4 +11,3 @@ export interface Project {
   repository: string;
   image: string;
 }
-

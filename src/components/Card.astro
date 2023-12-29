@@ -17,7 +17,11 @@ const { id, title, description, image, tecnologies, date, stack } = experience;
       <time>{date}</time>
       <span class="stack">{stack}</span>
     </div>
-    <img src={`./images/${image}`} alt={`Imagen del proyecto: ${title}`} loading="lazy" />
+    <img
+      src={`./images/${image}`}
+      alt={`Imagen del proyecto: ${title}`}
+      loading="lazy"
+    />
     <p>{description.substring(0, 200)}...</p>
     <div class="tags-container">
       {tecnologies.map((tecnology) => <span class="tag">{tecnology}</span>)}
@@ -102,8 +106,8 @@ const { id, title, description, image, tecnologies, date, stack } = experience;
 
   @keyframes changeOpacity {
     from {
-      opacity: .2;
-      scale: .8;
+      opacity: 0.2;
+      scale: 0.8;
     }
     to {
       opacity: 1;
