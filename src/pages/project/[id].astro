@@ -2,7 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import { getById } from "@utils/getData";
 import type { Project } from "@utils/types";
-import Page from "@components/Page.astro";
+import Page from "@components/Detail.astro";
 
 export function getStaticPaths() {
   return [
@@ -21,6 +21,9 @@ const { id } = Astro.params;
 const experience: Project = getById(Number(id));
 ---
 
-<Layout title={`${experience.title} | Federico Krenn`}>
+<Layout
+  title={`${experience.title} | Federico Krenn`}
+  description={experience.description}
+>
   <Page {experience} />
 </Layout>
