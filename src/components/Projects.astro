@@ -23,4 +23,34 @@ import type { Project } from "@utils/types";
     gap: 20px;
     margin: 20px 0;
   }
+
+  @media (max-width: 875px) {
+    div {
+      justify-content: center;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(5, 200px);
+      grid-template-areas:
+        "bikeStore bikeStore"
+        "restaurante regalos"
+        "apiRestBiblioteca regalos"
+        "apiRestEcommerce apiRestEcommerce"
+        "krennflix curriculum";
+    }
+  }
+
+  @media (max-width: 538px) {
+    div {
+      justify-content: center;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(7, 200px);
+      grid-template-areas:
+        "bikeStore"
+        "restaurante"
+        "regalos"
+        "apiRestBiblioteca"
+        "curriculum"
+        "krennflix"
+        "apiRestEcommerce";
+    }
+  }
 </style>

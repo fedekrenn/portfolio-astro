@@ -20,7 +20,19 @@ import type { Project } from "@utils/types";
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-template-rows: 500px;
-    grid-gap: 1rem;
+    grid-gap: 15px;
     margin: 20px 0;
+  }
+
+  @media (max-width: 768px) {
+    div {
+      grid-gap: 35px;
+    }
+  }
+
+  @media (max-width: 350px) {
+    div {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
   }
 </style>

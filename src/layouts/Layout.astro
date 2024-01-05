@@ -49,7 +49,7 @@ const { title, description } = Astro.props;
 
     main {
       margin: 0 auto;
-      padding: 20px;
+      padding: 0 20px;
       max-width: 1024px;
       color: var(--primary);
       font-size: 20px;
@@ -105,6 +105,17 @@ const { title, description } = Astro.props;
       border-radius: 15px;
       padding: 1px 8px;
       text-transform: capitalize;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        padding: 0 30px;
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+      }
     }
   </style>
 </html>
