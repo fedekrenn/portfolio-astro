@@ -22,7 +22,7 @@ const {
 const realProyect = client !== "Proyecto personal";
 ---
 
-<section>
+<section class="title-section">
   <h1>{title}</h1>
   <figure>
     <img src={`/images/${image}`} alt={title} />
@@ -199,6 +199,42 @@ const realProyect = client !== "Proyecto personal";
     100% {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .title-section {
+      margin-top: 150px;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    figcaption {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .details-container {
+      gap: 20px;
+    }
+
+    summary {
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .btn-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .btn {
+      width: 100%;
     }
   }
 </style>

@@ -9,8 +9,8 @@ const { experience } = Astro.props;
 const { id, title, description, image, tecnologies, date, stack } = experience;
 ---
 
-<a href={`/experience/${id}`}>
-  <article>
+<article>
+  <a href={`/experience/${id}`}>
     <h3>{title}</h3>
     <hr />
     <div class="data-container">
@@ -26,8 +26,8 @@ const { id, title, description, image, tecnologies, date, stack } = experience;
     <div class="tags-container">
       {tecnologies.map((tecnology) => <span class="tag">{tecnology}</span>)}
     </div>
-  </article>
-</a>
+  </a>
+</article>
 
 <style>
   article {
