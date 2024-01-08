@@ -32,7 +32,7 @@
       "client": "Empresas de atención al cliente",
       "description": "Sistema para carga de gestiones de atención al cliente para empresas de contact center. El objetivo es resolver el problema de unificar la persistencia de datos, dar seguimiento y trazabilidad a través de gestión de usuarios. Además cuentra con gráfica para ver la trazabilidad de las gestiones.",
       "date": "Julio 2023",
-      "tecnologies": ["react", "firebase", "materialUI"],
+      "tecnologies": ["react", "firebase", "material UI"],
       "newTool": "AutoAnimate",
       "stack": "Frontend",
       "deploy": "https://control-gestiones-mac.vercel.app/",

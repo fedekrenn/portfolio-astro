@@ -20,11 +20,11 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
-  <Header />
   <body>
+    <Header />
     <slot />
+    <Footer />
   </body>
-  <Footer />
 
   <style is:global>
     * {

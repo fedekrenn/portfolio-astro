@@ -22,82 +22,71 @@ const {
 const realProyect = client !== "Proyecto personal";
 ---
 
-<main>
-  <section>
-    <h1>{title}</h1>
-    <figure>
-      <img src={`/images/${image}`} alt={title} />
-      <figcaption>
-        {
-          realProyect && (
-            <p>
-              <strong>Desarrollado para:</strong>
-              {client}
-            </p>
-          )
-        }
-        <p>
-          <strong>Fecha:</strong>
-          {date}
-        </p>
-      </figcaption>
-    </figure>
-    <div class="btn-container">
+<section>
+  <h1>{title}</h1>
+  <figure>
+    <img src={`/images/${image}`} alt={title} />
+    <figcaption>
       {
-        deploy && (
-          <a class="btn" href={deploy} target="_blank">
-            Deploy
-          </a>
+        realProyect && (
+          <p>
+            <strong>Desarrollado para:</strong>
+            {client}
+          </p>
         )
       }
-      <a class="btn" href={repository} target="_blank">Repositorio</a>
-    </div>
-  </section>
-  <hr />
-  <section>
-    <p>{description}</p>
-  </section>
-  <hr />
-  <section class="details-container">
-    <details>
-      <summary>
-        <h2>Tecnologías utilizadas:</h2>
-      </summary>
       <p>
-        En este proyecto utilicé las siguientes tecnologías, librerías y
-        frameworks:
+        <strong>Fecha:</strong>
+        {date}
       </p>
-      <ul>
-        {tecnologies.map((tecnology) => <li class="tag">{tecnology}</li>)}
-      </ul>
-    </details>
-    <details>
-      <summary>
-        <h2>Nueva herramienta:</h2>
-      </summary>
-      <p>
-        En todos los proyectos intento aplicar un nuevo concepto, tecnología,
-        librería, herramienta, etc que no haya utilizado antes. En este proyecto
+    </figcaption>
+  </figure>
+  <div class="btn-container">
+    {
+      deploy && (
+        <a class="btn" href={deploy} target="_blank">
+          Deploy
+        </a>
+      )
+    }
+    <a class="btn" href={repository} target="_blank">Repositorio</a>
+  </div>
+</section>
+<hr />
+<section>
+  <p>{description}</p>
+</section>
+<hr />
+<section class="details-container">
+  <details>
+    <summary>
+      <h2>Tecnologías utilizadas:</h2>
+    </summary>
+    <p>
+      En este proyecto utilicé las siguientes tecnologías, librerías y
+      frameworks:
+    </p>
+    <ul>
+      {tecnologies.map((tecnology) => <li class="tag">{tecnology}</li>)}
+    </ul>
+  </details>
+  <details>
+    <summary>
+      <h2>Nueva herramienta:</h2>
+    </summary>
+    <p>
+      En todos los proyectos intento aplicar un nuevo concepto, tecnología,
+      librería, herramienta, etc que no haya utilizado antes. En este proyecto
 
-
-        <span>aprendí</span>:
-      </p>
-      <ul>
-        <li class="tag">{newTool}</li>
-      </ul>
-    </details>
-  </section>
-</main>
+      <span>aprendí</span>:
+    </p>
+    <ul>
+      <li class="tag">{newTool}</li>
+    </ul>
+  </details>
+</section>
 
 <style>
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 80px;
-  }
-
   section {
     width: 100%;
   }
@@ -158,7 +147,7 @@ const realProyect = client !== "Proyecto personal";
     max-width: 600px;
     border: none;
     border-bottom: 1px solid #e4e4d9;
-    margin: 50px 0;
+    margin: 50px auto;
   }
 
   p {
