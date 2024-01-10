@@ -1,0 +1,132 @@
+---
+const currentYear = String(new Date().getFullYear());
+---
+
+<section id="education" class="sub-section">
+  <h2>Formación</h2>
+  <ol>
+    <li>
+      <div class="circle"></div>
+      <div class="time-section">
+        <time datetime="2023">2023</time> - <time datetime={currentYear}>
+          Actualidad
+        </time>
+      </div>
+      <h2>Técnicatura Universitaria en Software Libre</h2>
+      <h3>Universidad Nacional del Litoral</h3>
+      <p>
+        Administración de sistemas GNU/Linux, proporcionando conocimientos en la
+        configuración y gestión de servicios de red. La propuesta académica
+        abarca la selección estratégica, adopción y desarrollo de aplicaciones
+        mediante el empleo de herramientas y recursos de software libre. Se
+        profundiza también en la instalación y configuración de sistemas de
+        bases de datos, priorizando la optimización de su rendimiento. Además,
+        la formación integra aspectos legales y éticos, con un enfoque especial
+        en la explotación responsable del software libre, respaldado por
+        conceptos de seguridad.
+      </p>
+    </li>
+    <li>
+      <div class="circle"></div>
+      <div class="time-section">
+        <time datetime="2023">2023</time> - <time datetime={currentYear}>
+          Actualidad
+        </time>
+      </div>
+      <h2>Técnicatura superior en Desarrollo Web y Aplicaciones Digitales</h2>
+      <h3>Instituto Superior Politécnico de Córdoba</h3>
+      <p>
+        Diseño y construcción de aplicaciones web, priorizando la calidad y
+        seguridad.El programa académico aborda el desarrollo de sitios web
+        dinámicos con interacción directa con bases de datos en servidores, así
+        como la consumición de servicios. Además, se enfatiza la habilidad para
+        producir documentación técnica exhaustiva, alineada con los
+        requerimientos funcionales y técnicos establecidos. La formación también
+        abarca la planificación de proyectos en entornos colaborativos,
+        promoviendo el desarrollo efectivo en equipo. Asimismo, la carrera
+        explora el campo del desarrollo de aplicaciones móviles multiplataforma,
+        brindando una perspectiva integral y actualizada para destacar en el
+        ámbito de la programación y el diseño web.
+      </p>
+    </li>
+  </ol>
+</section>
+
+<style>
+  ol {
+    font-size: 15px;
+    position: relative;
+    counter-reset: item;
+    margin-left: 42px;
+  }
+
+  li {
+    position: relative;
+    padding: 20px 0;
+  }
+
+  li::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -30px;
+    margin-left: -2px;
+    width: 4px;
+    height: 105%;
+    background: #ccc;
+  }
+
+  li .circle {
+    position: absolute;
+    top: 20px;
+    left: -30px;
+    margin-left: -12px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 4px solid #ccc;
+    background: #fff;
+    z-index: 1;
+  }
+
+  li .circle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ccc;
+  }
+
+  .time-section {
+    color: #bdbcbc;
+  }
+
+  li h2 {
+    text-align: left;
+    font-size: 1.5em;
+    margin: 0;
+    background: linear-gradient(45deg, var(--secondary), #e4e4d9);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+  p {
+    margin-top: 20px;
+    font-size: 0.9em;
+  }
+
+  @media (max-width: 673px){
+    li h2{
+      line-height: 1;
+      margin: 20px 0;
+    }
+  }
+</style>
