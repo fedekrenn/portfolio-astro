@@ -25,7 +25,7 @@ const realProyect = client !== "Proyecto personal";
 <section class="title-section">
   <h1>{title}</h1>
   <figure>
-    <img src={`/images/${image}`} alt={title} />
+    <img src={`/images/${image}`} alt={title} class="shadow" />
     <figcaption>
       {
         realProyect && (
@@ -44,12 +44,12 @@ const realProyect = client !== "Proyecto personal";
   <div class="btn-container">
     {
       deploy && (
-        <a class="btn" href={deploy} target="_blank">
+        <a class="btn shadow" href={deploy} target="_blank">
           Deploy
         </a>
       )
     }
-    <a class="btn" href={repository} target="_blank">Repositorio</a>
+    <a class="btn shadow" href={repository} target="_blank">Repositorio</a>
   </div>
 </section>
 <hr />
