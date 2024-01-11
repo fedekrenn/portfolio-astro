@@ -12,8 +12,10 @@ const currentYear = String(new Date().getFullYear());
           Actualidad
         </time>
       </div>
-      <h2>Técnicatura Universitaria en Software Libre</h2>
-      <h3>Universidad Nacional del Litoral</h3>
+      <h3>Técnicatura Universitaria en Software Libre</h3>
+      <h4>
+        <a href="https://www.unl.edu.ar/" target="_blank">Universidad Nacional del Litoral</a>
+      </h4>
       <p>
         Administración de sistemas GNU/Linux, proporcionando conocimientos en la
         configuración y gestión de servicios de red. La propuesta académica
@@ -33,8 +35,12 @@ const currentYear = String(new Date().getFullYear());
           Actualidad
         </time>
       </div>
-      <h2>Técnicatura superior en Desarrollo Web y Aplicaciones Digitales</h2>
-      <h3>Instituto Superior Politécnico de Córdoba</h3>
+      <h3>Técnicatura superior en Desarrollo Web y Aplicaciones Digitales</h3>
+      <h4>
+        <a href="https://www.ispc.edu.ar/" target="_blank">
+          Instituto Superior Politécnico de Córdoba
+        </a>
+      </h4>
       <p>
         Diseño y construcción de aplicaciones web, priorizando la calidad y
         seguridad.El programa académico aborda el desarrollo de sitios web
@@ -105,7 +111,7 @@ const currentYear = String(new Date().getFullYear());
     color: #bdbcbc;
   }
 
-  li h2 {
+  h3 {
     text-align: left;
     font-size: 1.5em;
     margin: 0;
@@ -114,7 +120,7 @@ const currentYear = String(new Date().getFullYear());
     -webkit-background-clip: text;
   }
 
-  h3 {
+  h4 {
     font-size: 1.1em;
   }
 
@@ -123,8 +129,8 @@ const currentYear = String(new Date().getFullYear());
     font-size: 0.9em;
   }
 
-  @media (max-width: 673px){
-    li h2{
+  @media (max-width: 673px) {
+    h3 {
       line-height: 1;
       margin: 20px 0;
     }
