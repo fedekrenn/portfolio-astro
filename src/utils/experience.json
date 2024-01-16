@@ -48,7 +48,7 @@
       "tecnologies": ["python", "django", "SQLite", "javaScript"],
       "newTool": "Django",
       "stack": "Fullstack",
-      "deploy": null,
+      "deploy": "https://cocinando-ando.vercel.app/",
       "repository": "https://github.com/fedekrenn/django-mvt-cocina",
       "image": "4-django.webp"
     },
