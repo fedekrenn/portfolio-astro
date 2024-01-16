@@ -111,4 +111,27 @@
       font-size: 0.7em;
     }
   }
+
+  @media (max-height: 500px) {
+    header {
+      min-height: 50px;
+      font-size: 0.7em;
+      justify-content: center;
+    }
+
+    ul {
+      display: none;
+    }
+
+    @keyframes animateHeader {
+      from {
+        background-color: #ffffff42;
+        backdrop-filter: blur(10px);
+      }
+      to {
+        background-color: #ffffff42;
+        backdrop-filter: blur(10px);
+      }
+    }
+  }
 </style>
