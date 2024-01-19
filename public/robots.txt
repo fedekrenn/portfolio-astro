@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://federico-krenn.vercel.app/sitemap-index.xml
