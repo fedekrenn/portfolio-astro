@@ -11,7 +11,7 @@ const { id, title, description, image, tecnologies, date, stack } = experience;
 
 <article class="shadow">
   <a href={`/experiencia/${id}`}>
-    <h3>{title}</h3>
+    <h3 transition:name={`${title}-title`}>{title}</h3>
     <hr />
     <div class="data-container">
       <time>{date}</time>
@@ -20,6 +20,7 @@ const { id, title, description, image, tecnologies, date, stack } = experience;
     <img
       src={`./images/${image}`}
       alt={`Imagen del proyecto: ${title}`}
+      transition:name={`${title}-image`}
       loading="lazy"
     />
     <p>{description.substring(0, 200)}...</p>

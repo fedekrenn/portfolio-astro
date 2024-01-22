@@ -10,9 +10,14 @@ const { id, title, image } = experience;
 ---
 
 <article class={`card-${id} shadow`}>
-  <a href={`/proyecto/${id}`}>
+  <a href={`/proyecto/${id}`} transition:name={`${title}-title`}>
     <h3>{title}</h3>
-    <img src={`./images/${image}`} alt={`Proyecto ${title}`} loading="lazy" />
+    <img
+      src={`./images/${image}`}
+      alt={`Proyecto ${title}`}
+      transition:name={`${title}-image`}
+      loading="lazy"
+    />
   </a>
 </article>
 
