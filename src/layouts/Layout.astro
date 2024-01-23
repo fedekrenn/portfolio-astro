@@ -1,7 +1,7 @@
 ---
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
 import "@fontsource-variable/outfit";
 
 type Props = {
@@ -18,7 +18,10 @@ const { title, description } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <meta name="google-site-verification" content="XUaQScHekK-fLIWxvZPcjJqtDV5pLxcv059vER7ypjU" />
+    <meta
+      name="google-site-verification"
+      content="XUaQScHekK-fLIWxvZPcjJqtDV5pLxcv059vER7ypjU"
+    />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
@@ -28,115 +31,147 @@ const { title, description } = Astro.props;
     <Header />
     <slot />
     <Footer />
-  </body>
-
-  <style is:global>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    :root {
-      --font-family: "Outfit Variable", system-ui, sans-serif;
-      --primary: #f5f5f5;
-      --secondary: #3f50eb;
-      --dark: #13151a;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: var(--font-family);
-      background: var(--dark);
-      background-size: 224px;
-    }
-
-    main {
-      margin: 0 auto;
-      padding: 0 20px;
-      max-width: 1024px;
-      color: var(--primary);
-      font-size: 20px;
-      line-height: 1.6;
-      min-height: 70vh;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 35px;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-    }
-
-    section.sub-section {
-      margin: 130px 0;
-    }
-
-    li {
-      list-style-type: none;
-    }
-
-    .btn {
-      width: 40%;
-      padding: 10px;
-      font-size: 1em;
-      border: none;
-      border-radius: 10px;
-      outline: none;
-      color: #0e0e0f;
-      background-color: #f3f3f3;
-      font-family: var(--font-family);
-      font-size: 1em;
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
-    }
-
-    .btn:hover {
-      background-color: var(--secondary);
-      color: var(--primary);
-    }
-
-    .shadow {
-      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-    }
-
-    .tag {
-      font-size: 0.6em;
-      background-color: var(--secondary);
-      border-radius: 15px;
-      padding: 1px 8px;
-      text-transform: capitalize;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        translate: 0 50px;
-        scale: 0.7;
+    <style is:global>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
-      to {
-        opacity: 1;
-        translate: 0 0;
-        scale: 1;
-      }
-    }
 
-    @media (max-width: 768px) {
+      :root {
+        --font-family: "Outfit Variable", system-ui, sans-serif;
+        --primary: #f5f5f5;
+        --secondary: #3f50eb;
+        --dark: #13151a;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--font-family);
+        background: var(--dark);
+        background-size: 224px;
+      }
+
       main {
-        padding: 0 30px;
+        margin: 0 auto;
+        padding: 0 20px;
+        max-width: 1024px;
+        color: var(--primary);
+        font-size: 20px;
+        line-height: 1.6;
+        min-height: 70vh;
       }
 
-      h1,
       h2 {
-        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 35px;
       }
-    }
-  </style>
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      section.sub-section {
+        margin: 130px 0;
+      }
+
+      li {
+        list-style-type: none;
+      }
+
+      .btn {
+        width: 40%;
+        padding: 10px;
+        font-size: 1em;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        color: #0e0e0f;
+        background-color: #f3f3f3;
+        font-family: var(--font-family);
+        font-size: 1em;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .btn:hover {
+        background-color: var(--secondary);
+        color: var(--primary);
+      }
+
+      .shadow {
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+      }
+
+      .tag {
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        border-radius: 9999px;
+        padding: 1px;
+      }
+
+      .tag-effect {
+        position: absolute;
+        inset: -1000%;
+        animation: spin 2s linear infinite;
+        background-image: conic-gradient(
+          from 90deg at 50% 50%,
+          #e2cbff,
+          #393bb2,
+          #e2cbff
+        );
+      }
+
+      .tag-name {
+        display: inline-flex;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        border-radius: 9999px;
+        background-color: #020617e6;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        font-weight: 500;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+        z-index: 99;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          translate: 0 50px;
+          scale: 0.7;
+        }
+        to {
+          opacity: 1;
+          translate: 0 0;
+          scale: 1;
+        }
+      }
+
+      @media (max-width: 768px) {
+        main {
+          padding: 0 30px;
+        }
+
+        h1,
+        h2 {
+          text-align: center;
+        }
+      }
+    </style>
+  </body>
 </html>

@@ -25,7 +25,12 @@ const { id, title, description, image, tecnologies, date, stack } = experience;
     />
     <p>{description.substring(0, 200)}...</p>
     <div class="tags-container">
-      {tecnologies.map((tecnology) => <span class="tag">{tecnology}</span>)}
+      {tecnologies.map((tecnology) => (
+        <span class="tag">
+          <span class="tag-effect"></span>
+          <div class="tag-name">{tecnology}</div>
+        </span>
+      ))}
     </div>
   </a>
 </article>
