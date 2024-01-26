@@ -6,7 +6,7 @@ import type { Project } from "@utils/types";
 
 <section id="projects" class="sub-section">
   <h2>Proyectos personales</h2>
-  <div>
+  <div class="bento-container">
     {getProjects().map((experience: Project) => <BentoItem {experience} />)}
   </div>
 </section>
@@ -52,5 +52,17 @@ import type { Project } from "@utils/types";
         "krennflix"
         "apiRestEcommerce";
     }
+  }
+</style>
+
+<style is:global>
+  .bento-container article{
+    transition: all .4s ease-in-out;
+  }
+
+  .bento-container:hover article:not(:hover) {
+    opacity: 0.5;
+    filter: grayscale(1);
+    /* transition: all 0.3s ease-in-out; */
   }
 </style>
