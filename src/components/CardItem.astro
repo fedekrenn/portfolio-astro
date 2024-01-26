@@ -1,5 +1,6 @@
 ---
 import type { Project } from "@utils/types";
+import Tag from "./Tag.astro";
 
 interface Props {
   experience: Project;
@@ -24,14 +25,9 @@ const { id, title, description, image, tecnologies, date, stack } = experience;
       loading="lazy"
     />
     <p>{description.substring(0, 200)}...</p>
-    <div class="tags-container">
-      {tecnologies.map((tecnology) => (
-        <span class="tag">
-          <span class="tag-effect"></span>
-          <div class="tag-name">{tecnology}</div>
-        </span>
-      ))}
-    </div>
+    <ul class="tags-container">
+      {tecnologies.map((tecnology) => <Tag {tecnology} />)}
+    </ul>
   </a>
 </article>
 

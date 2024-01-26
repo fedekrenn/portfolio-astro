@@ -1,4 +1,5 @@
 ---
+import Tag from "./Tag.astro";
 import type { Project } from "@utils/types";
 
 type Props = {
@@ -72,14 +73,7 @@ const realProyect = client !== "Proyecto personal";
       frameworks:
     </p>
     <ul>
-      {
-        tecnologies.map((tecnology) => (
-          <li class="tag">
-            <span class="tag-effect" />
-            <div class="tag-name">{tecnology}</div>
-          </li>
-        ))
-      }
+      {tecnologies.map((tecnology) => <Tag {tecnology} />)}
     </ul>
   </details>
   <details>
@@ -92,11 +86,14 @@ const realProyect = client !== "Proyecto personal";
 
       <span>aprendí</span>:
     </p>
-    <ul>
+    <!-- <ul>
       <span class="tag">
         <span class="tag-effect"></span>
-        <div class="tag-name">{newTool}</div>
+        <div class="tag-name">{newTool.name}</div>
       </span>
+    </ul> -->
+    <ul>
+      <Tag tecnology={newTool} />
     </ul>
   </details>
 </section>
@@ -179,11 +176,8 @@ const realProyect = client !== "Proyecto personal";
     gap: 40px;
   }
 
-  .tag {
-    margin: 15px 0;
-  }
-
   ul {
+    margin: 15px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

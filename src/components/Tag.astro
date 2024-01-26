@@ -1,0 +1,60 @@
+---
+const { tecnology } = Astro.props;
+const { name, image } = tecnology;
+---
+
+<li class="tag">
+  <span class="tag-effect"></span>
+  <div class="tag-name">
+    {image && <img class="tecnology-icon" src={`/icons/${image}`} alt={name} />}
+    <span>{name}</span>
+  </div>
+</li>
+
+<style>
+  .tag {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    border-radius: 9999px;
+    padding: 1px;
+  }
+
+  .tag-effect {
+    position: absolute;
+    inset: -1000%;
+    animation: spin 2s linear infinite;
+    background-image: conic-gradient(
+      from 90deg at 50% 50%,
+      #e2cbff,
+      #393bb2,
+      #e2cbff
+    );
+  }
+
+  .tag-name {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    border-radius: 9999px;
+    background-color: #020617e6;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    z-index: 99;
+  }
+
+  .tecnology-icon {
+    width: 13px;
+    height: 13px;
+    margin-right: 8px;
+  }
+</style>

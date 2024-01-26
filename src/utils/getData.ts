@@ -1,5 +1,6 @@
-import { data } from "./experience.json";
 import type { Project } from "./types";
+import { data } from "./experiencia";
+
 
 export const getExperience = (): Project[] => {
   return data.filter((item) => item.client !== "Proyecto personal");
