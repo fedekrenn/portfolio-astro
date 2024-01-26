@@ -1,4 +1,4 @@
-export interface Tecnology {
+export interface Tag {
   name: string;
   image?: string;
 }
@@ -9,8 +9,8 @@ export interface Project {
   client: string;
   description: string;
   date: string;
-  tecnologies: Tecnology[];
-  newTool: Tecnology;
+  tecnologies: Tag[];
+  newTool: Tag;
   stack: string;
   deploy: string | null;
   repository: string;

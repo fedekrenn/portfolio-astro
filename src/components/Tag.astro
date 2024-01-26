@@ -1,4 +1,10 @@
 ---
+import type { Tag } from "../utils/types";
+
+type Props = {
+  tecnology: Tag;
+};
+
 const { tecnology } = Astro.props;
 const { name, image } = tecnology;
 ---
