@@ -1,4 +1,5 @@
 ---
+import Button from "./Button.astro";
 import Tag from "./Tag.astro";
 import type { Project } from "@utils/types";
 
@@ -48,14 +49,8 @@ const realProyect = client !== "Proyecto personal";
     </figcaption>
   </figure>
   <div class="btn-container">
-    {
-      deploy && (
-        <a class="btn shadow" href={deploy} target="_blank">
-          Deploy
-        </a>
-      )
-    }
-    <a class="btn shadow" href={repository} target="_blank">Repositorio</a>
+    {deploy && <Button link={deploy} text="Deploy" />}
+    <Button link={repository} text="Repositorio" />
   </div>
 </section>
 <hr />
@@ -86,12 +81,6 @@ const realProyect = client !== "Proyecto personal";
 
       <span>aprendí</span>:
     </p>
-    <!-- <ul>
-      <span class="tag">
-        <span class="tag-effect"></span>
-        <div class="tag-name">{newTool.name}</div>
-      </span>
-    </ul> -->
     <ul>
       <Tag tecnology={newTool} />
     </ul>
@@ -147,11 +136,6 @@ const realProyect = client !== "Proyecto personal";
     align-items: center;
     justify-content: center;
     gap: 40px;
-  }
-
-  .btn {
-    text-align: center;
-    width: 150px;
   }
 
   hr {
@@ -238,10 +222,6 @@ const realProyect = client !== "Proyecto personal";
     .btn-container {
       flex-direction: column;
       gap: 20px;
-    }
-
-    .btn {
-      width: 100%;
     }
   }
 </style>
