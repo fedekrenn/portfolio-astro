@@ -21,7 +21,7 @@ const { id, title, description, image, tecnologies, date, stack } = experience;
     <img
       src={`./images/${image}`}
       alt={`Imagen del proyecto: ${title}`}
-      transition:name={`${title}-image`}
+      transition:name={`${title}-${id}-image`}
       loading="lazy"
     />
     <p>{description.substring(0, 200)}...</p>

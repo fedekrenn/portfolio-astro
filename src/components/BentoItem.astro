@@ -15,7 +15,7 @@ const { id, title, image } = experience;
     <img
       src={`./images/${image}`}
       alt={`Proyecto ${title}`}
-      transition:name={`${title}-image`}
+      transition:name={`${title}-${id}-image`}
       loading="lazy"
     />
   </a>
@@ -31,39 +31,57 @@ const { id, title, image } = experience;
   }
 
   img:hover {
-    transform: scale(1.1);
     filter: brightness(1.1) contrast(1.1);
   }
 
   .card-4 {
     grid-area: restaurante;
+    img {
+      object-fit: cover;
+    }
   }
 
   .card-5 {
     grid-area: krennflix;
+    img {
+      object-fit: cover;
+    }
   }
 
   .card-6 {
     grid-area: bikeStore;
+    img {
+      object-fit: cover;
+    }
   }
 
   .card-7 {
     grid-area: apiRestEcommerce;
+    img {
+      object-fit: cover;
+      object-position: 0 -250px;
+    }
   }
 
   .card-8 {
     grid-area: regalos;
+    img {
+      object-fit: cover;
+    }
   }
 
   .card-9 {
     grid-area: apiRestBiblioteca;
     filter: brightness(0.9) contrast(1.1);
+    img {
+      object-fit: cover;
+    }
   }
 
   .card-10 {
     grid-area: curriculum;
     img {
-      object-position: 0px;
+      object-fit: cover;
     }
   }
 
@@ -72,12 +90,15 @@ const { id, title, image } = experience;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
+    padding: 7px;
+    background-color: rgba(0, 0, 0, 0.75);
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-align: center;
     z-index: 99;
+    text-shadow:
+      2px 2px 5px rgba(0, 0, 0),
+      -2px -2px 5px rgba(0, 0, 0);
   }
 
   article {
@@ -98,4 +119,24 @@ const { id, title, image } = experience;
     height: 100%;
     width: 100%;
   }
+
+  @media (max-width: 950px) {
+    .card-7 {
+      img {
+        object-position: center;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    h3 {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 468px) {
+      h3 {
+        top: 0;
+      }
+    }
 </style>
