@@ -5,8 +5,7 @@ type Props = {
   tecnology: Tag;
 };
 
-const { tecnology } = Astro.props;
-const { name, image } = tecnology;
+const { tecnology: { name, image } = {} } = Astro.props;
 ---
 
 <li class="tag">

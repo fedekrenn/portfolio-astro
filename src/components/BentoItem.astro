@@ -5,8 +5,7 @@ type Props = {
   experience: Project;
 };
 
-const { experience } = Astro.props;
-const { id, title, image } = experience;
+const { experience: { id, title, image } = {} } = Astro.props;
 ---
 
 <article class={`card-${id} shadow`}>

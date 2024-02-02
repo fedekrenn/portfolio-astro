@@ -6,8 +6,7 @@ type Props = {
   experience: Project;
 }
 
-const { experience } = Astro.props;
-const { id, title, description, image, tecnologies, date, stack } = experience;
+const { experience: { id, title, description, image, tecnologies, date, stack } = {} } = Astro.props;
 ---
 
 <article class="shadow">
@@ -24,9 +23,9 @@ const { id, title, description, image, tecnologies, date, stack } = experience;
       transition:name={`${title}-${id}-image`}
       loading="lazy"
     />
-    <p>{description.substring(0, 200)}...</p>
+    <p>{description?.substring(0, 200)}...</p>
     <ul class="tags-container">
-      {tecnologies.map((tecnology) => <Tag {tecnology} />)}
+      {tecnologies?.map((tecnology) => <Tag {tecnology} />)}
     </ul>
   </a>
 </article>
