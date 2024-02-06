@@ -8,6 +8,7 @@ export interface Project {
   title: string;
   client: string;
   description: string;
+  meta: string;
   date: string;
   tecnologies: Tag[];
   newTool: Tag;

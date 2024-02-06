@@ -23,7 +23,7 @@ const experience: Project = getById(Number(id));
 
 <Layout
   title={`${experience.title} | Federico Krenn`}
-  description={experience.description}
+  description={experience.meta}
 >
   <main>
     <Detail {experience} />
