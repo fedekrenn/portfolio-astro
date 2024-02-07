@@ -11,7 +11,15 @@ const { tecnology: { name, image } = {} } = Astro.props;
 <li class="tag">
   <span class="tag-effect"></span>
   <div class="tag-name">
-    {image && <img class="tecnology-icon" src={`/icons/${image}`} alt={name} />}
+    {
+      image && (
+        <img
+          class="tecnology-icon"
+          src={`/icons/${image}`}
+          alt={`Ícono de tecnología: ${name}`}
+        />
+      )
+    }
     <span>{name}</span>
   </div>
 </li>
