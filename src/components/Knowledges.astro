@@ -1,0 +1,51 @@
+---
+const list = [
+  "JavaScript",
+  "React",
+  "SQL",
+  "Node.js",
+  "Express",
+  "API Rest",
+  "Python",
+  "Django",
+  "Git",
+];
+---
+
+<section class="sub-section">
+  <h2>Skills</h2>
+  <ul>
+    {list.map((skill) => <li>{skill}</li>)}
+  </ul>
+</section>
+
+<style>
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  li {
+    list-style: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #80808046;
+    color: var(--color-white);
+  }
+
+  @media (max-width: 540px) {
+    ul {
+      width: 100%;
+    }
+
+    li {
+      padding: 0.5rem;
+      font-size: 0.8rem;
+    }
+  }
+</style>
