@@ -63,6 +63,10 @@ const tags = {
     name: "SQLite",
     image: "sqlite.svg",
   },
+  TAILWIND: {
+    name: "TailwindCSS",
+    image: "tailwindcss.svg",
+  },
   SWIPER: {
     name: "SwiperJS"
   },
@@ -77,9 +81,6 @@ const tags = {
   },
   NODEMAILER: {
     name: "Nodemailer"
-  },
-  SNOWFALL: {
-    name: "React Snowfall"
   }
 }
 
@@ -138,7 +139,7 @@ export const data = [
     stack: "Fullstack",
     deploy: "https://cocinando-ando.vercel.app/",
     repository: "https://github.com/fedekrenn/django-mvt-cocina",
-    image: "4-django.webp"
+    image: "4-gestion-cocina.webp"
   },
   {
     id: 5,
@@ -188,17 +189,17 @@ export const data = [
   },
   {
     id: 8,
-    title: "Lista de regalos navideños",
+    title: "Sorteo equipos Fifa",
     client: "Proyecto personal",
-    description: "Aplicación web para gestionar una lista de regalos navideños. El objetivo es que cada usuario pueda crear su lista de regalos, agregarlos, eliminarlos, marcarlos como comprados y compartirlos con sus amigos y familiares.",
-    meta: "Crea, gestiona y comparte tu lista de regalos navideños de manera fácil y divertida. ¡Haz la Navidad aún más especial con nuestra aplicación web!",
-    date: "Diciembre 2023",
-    tecnologies: [tags.REACT, tags.MATERIAL],
-    newTool: tags.SNOWFALL,
+    description: "Aplicación web para gestionar el sorteo de parejas/equipos para juegos de fútbol virtual como Fifa, PES, etc. Podemos sortear sólo equipos random o bien ingresar nombres de jugadores y que se les asigne un equipo aleatorio, como así también jugar por parejas.",
+    meta: "Organiza el sorteo para juegos de fútbol virtual. Equipos/jugadores aleatorios para las partidas. ¡Simplifica la organización y aumenta la diversión!",
+    date: "Febrero 2024",
+    tecnologies: [tags.REACT],
+    newTool: tags.TAILWIND,
     stack: "Frontend",
-    deploy: "https://adviency-hazel.vercel.app/",
-    repository: "https://github.com/fedekrenn/adviency",
-    image: "8-regalos-navidad.webp"
+    deploy: "https://sorteo-equipos.vercel.app/",
+    repository: "https://github.com/fedekrenn/sorteo-equipos",
+    image: "8-sorteo-equipos.webp"
   },
   {
     id: 9,
