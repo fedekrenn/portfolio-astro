@@ -2,12 +2,14 @@
   <a href="/#presentation">
     <strong>&lt;Fk <span class="color-diagonal">/</span>&gt;</strong>
   </a>
-  <ul>
-    <li><a href="/#experience">Experiencia</a></li>
-    <li><a href="/#projects">Proyectos</a></li>
-    <li><a href="/#education">Formación</a></li>
-    <li><a href="/#contact">Contacto</a></li>
-  </ul>
+  <nav>
+    <ul>
+      <li><a href="/#experience">Experiencia</a></li>
+      <li><a href="/#projects">Proyectos</a></li>
+      <li><a href="/#education">Formación</a></li>
+      <li><a href="/#contact">Contacto</a></li>
+    </ul>
+  </nav>
 </header>
 
 <style>
@@ -50,8 +52,19 @@
     }
   }
 
-  li:hover {
-    color: var(--secondary);
+  li::after {
+    content: "";
+    display: block;
+    margin-top: 2px;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s;
+  }
+
+  li:hover::after {
+    width: 100%;
+    transition: width 0.3s;
   }
 
   .color-diagonal {
