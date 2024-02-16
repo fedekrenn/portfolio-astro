@@ -17,8 +17,8 @@ import type { Project } from "src/types/types";
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-template-rows: repeat(3, 200px);
     grid-template-areas:
-      "krennflix restaurante bikeStore"
-      "krennflix regalos apiRestBiblioteca"
+      "restaurante sorteo bikeStore"
+      "restaurante krennflix apiRestBiblioteca"
       "curriculum apiRestEcommerce apiRestEcommerce";
     gap: 20px;
     margin: 20px 0;
@@ -31,8 +31,8 @@ import type { Project } from "src/types/types";
       grid-template-rows: repeat(5, 200px);
       grid-template-areas:
         "bikeStore bikeStore"
-        "restaurante regalos"
-        "apiRestBiblioteca regalos"
+        "restaurante sorteo"
+        "apiRestBiblioteca sorteo"
         "apiRestEcommerce apiRestEcommerce"
         "krennflix curriculum";
     }
@@ -46,7 +46,7 @@ import type { Project } from "src/types/types";
       grid-template-areas:
         "bikeStore"
         "restaurante"
-        "regalos"
+        "sorteo"
         "apiRestBiblioteca"
         "curriculum"
         "krennflix"

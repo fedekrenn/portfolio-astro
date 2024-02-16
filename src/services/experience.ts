@@ -189,7 +189,7 @@ export const data = [
   },
   {
     id: 8,
-    title: "Sorteo equipos Fifa",
+    title: "Sorteo equipos",
     client: "Proyecto personal",
     description: "Aplicación web para gestionar el sorteo de parejas/equipos para juegos de fútbol virtual como Fifa, PES, etc. Podemos sortear sólo equipos random o bien ingresar nombres de jugadores y que se les asigne un equipo aleatorio, como así también jugar por parejas.",
     meta: "Organiza el sorteo para juegos de fútbol virtual. Equipos/jugadores aleatorios para las partidas. ¡Simplifica la organización y aumenta la diversión!",
