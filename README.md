@@ -1,54 +1,28 @@
-# Astro Starter Kit: Basics
+# 💼 Portfolio Astro
 
-```sh
-npm create astro@latest -- --template basics
-```
+## Descripción
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Este es mi portfolio personal como desarrollador fullstack. En el mismo se encuentran los proyectos que he realizado, así como también información sobre mi formación, experiencia laboral y las vías de contacto.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Captura de pantalla 2024-02-19 174125](https://github.com/fedekrenn/sorteo-equipos/assets/90353038/668a763b-2cb2-4011-8363-e9038526862a)
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Detalles
 
-## 🚀 Project Structure
+Se utiliza como framework web "Astro" haciendo énfasis en el routing que ofrece junto con las animated transitions. Además, se utiliza TypeScript para el desarrollo del mismo y se emplea la integración sitemap para optimizar el SEO.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Tecnologías utilizadas
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- Astro
+- TypeScript
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+<br>
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 🙋‍♂️ Hola, Soy Federico Krenn
+:nerd_face: Desarrollador web Fullstack
+<br>
+👨‍🎓 Realizando la Tecnicatura en Desarrollo Web en ISPC y Tecnicatura en Software Libre en la UNL
+<br>
+📫 Conectemos en Linkedin: https://www.linkedin.com/in/fkrenn/
 
-## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
