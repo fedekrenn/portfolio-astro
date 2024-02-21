@@ -17,6 +17,7 @@ const { tecnology: { name, image } = {} } = Astro.props;
           class="tecnology-icon"
           src={`/icons/${image}`}
           alt={`Ícono de tecnología: ${name}`}
+          loading="lazy"
         />
       )
     }
