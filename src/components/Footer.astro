@@ -2,23 +2,26 @@
 import github from "@assets/icons/github.svg";
 import linkedin from "@assets/icons/linkedin.svg";
 import email from "@assets/icons/email.svg";
+import EmailLogo from "@icons/EmailLogo.astro";
+import GithubLogo from "@icons/GithubLogo.astro";
+import LinkedinLogo from "@icons/LinkedinLogo.astro";
 ---
 
 <footer>
   <ul>
     <li>
       <a href="https://github.com/fedekrenn" target="_blank">
-        <img src={github.src} alt="Github logo" loading="lazy"/>
+        <GithubLogo color="#fff" />
       </a>
     </li>
     <li>
       <a href="https://www.linkedin.com/in/fkrenn/" target="_blank">
-        <img src={linkedin.src} alt="LinkedIn logo" loading="lazy"/>
+        <LinkedinLogo color="#fff" />
       </a>
     </li>
     <li>
       <a href="mailto:fedekrenn@gmail.com" target="_blank" class="email-icon">
-        <img src={email.src} alt="Email logo" loading="lazy"/>
+        <EmailLogo color="#fff" />
       </a>
     </li>
   </ul>
@@ -38,10 +41,5 @@ import email from "@assets/icons/email.svg";
     align-items: center;
     gap: 20px;
     list-style: none;
-  }
-
-  img {
-    width: 30px;
-    height: 30px;
   }
 </style>

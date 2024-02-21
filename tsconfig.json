@@ -6,7 +6,8 @@
       "@components/*": ["./src/components/*"],
       "@layouts/*": ["./src/layouts/*"],
       "@assets/*": ["./src/assets/*"],
-      "@services/*": ["./src/services/*"]
+      "@services/*": ["./src/services/*"],
+      "@icons/*": ["./src/icons/*"],
     }
   }
 }
