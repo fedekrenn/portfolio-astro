@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Este es mi portfolio personal como desarrollador fullstack. En el mismo se encuentran los proyectos que he realizado, así como también información sobre mi formación, experiencia laboral y las vías de contacto.
+Este es mi portfolio personal como desarrollador frontend. En el mismo se encuentran los proyectos que he realizado, así como también información sobre mi formación, experiencia laboral y las vías de contacto.
 
 ![Captura de pantalla 2024-02-19 174125](https://github.com/fedekrenn/sorteo-equipos/assets/90353038/668a763b-2cb2-4011-8363-e9038526862a)
 
@@ -19,7 +19,7 @@ Se utiliza como framework web "Astro" haciendo énfasis en el routing que ofrece
 <br>
 
 ## 🙋‍♂️ Hola, Soy Federico Krenn
-:nerd_face: Desarrollador web Fullstack
+:nerd_face: Desarrollador web Frontend
 <br>
 👨‍🎓 Realizando la Tecnicatura en Desarrollo Web en ISPC y Tecnicatura en Software Libre en la UNL
 <br>

@@ -16,24 +16,27 @@ const { title, description } = Astro.props;
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    
+
     <meta name="description" content={description} />
     <meta property="og:url" content={Astro.request.url} />
-    <meta property="og:type" content="website">
-    <meta property="og:title" content={title}>
-    <meta property="og:description" content={description}>
-    <meta property="og:image" content="/images/meta-img.webp">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/images/meta-img.webp" />
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="federico-krenn.vercel.app">
-    <meta property="twitter:url" content={Astro.request.url}>
-    <meta name="twitter:title" content={title}>
-    <meta name="twitter:description" content={description}>
-    <meta name="twitter:image" content="/images/meta-img.webp">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="federico-krenn.vercel.app" />
+    <meta property="twitter:url" content={Astro.request.url} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/images/meta-img.webp" />
 
-    <meta name="google-site-verification" content="XUaQScHekK-fLIWxvZPcjJqtDV5pLxcv059vER7ypjU" />
+    <meta
+      name="google-site-verification"
+      content="XUaQScHekK-fLIWxvZPcjJqtDV5pLxcv059vER7ypjU"
+    />
     <meta name="viewport" content="width=device-width" />
-    
+
     <link rel="canonical" href={Astro.request.url} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -44,118 +47,139 @@ const { title, description } = Astro.props;
     <Header />
     <slot />
     <Footer />
-  </body><style is:global>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    :root {
-      --font-family: "Outfit Variable", system-ui, sans-serif;
-      --primary: #f5f5f5;
-      --secondary: #3f50eb;
-      --dark: #13151a;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: var(--font-family);
-      background: var(--dark);
-      background-size: 224px;
-    }
-
-    main {
-      margin: 0 auto;
-      padding: 0 20px;
-      max-width: 1024px;
-      color: var(--primary);
-      font-size: 20px;
-      line-height: 1.6;
-      min-height: 70vh;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 35px;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      width: 100%;
-    }
-
-    section.sub-section {
-      margin: 110px 0;
-    }
-
-    li {
-      list-style-type: none;
-    }
-
-    .btn {
-      width: 40%;
-      padding: 10px;
-      font-size: 1em;
-      border: none;
-      border-radius: 10px;
-      outline: none;
-      color: #0e0e0f;
-      background-color: #f3f3f3;
-      font-family: var(--font-family);
-      font-size: 1em;
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
-    }
-
-    .btn:hover {
-      background-color: var(--secondary);
-      color: var(--primary);
-    }
-
-    .shadow {
-      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-    }
-
-    body::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    body::-webkit-scrollbar-thumb {
-      background-color: #888;
-      border-radius: 10px;
-    }
-
-    body::-webkit-scrollbar-track {
-      background-color: #383737;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        translate: 0 50px;
-        scale: 0.7;
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Person",
+        "name": "Federico Krenn",
+        "url": "https://federico-krenn.vercel.app/",
+        "image": "https://federico-krenn.vercel.app/_astro/profile.15QHcWVf.webp",
+        "sameAs": [
+          "https://github.com/fedekrenn",
+          "https://federico-krenn.vercel.app/",
+          "https://www.linkedin.com/in/fkrenn/"
+        ],
+        "jobTitle": "Frontend developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Claro AMX"
+        }
       }
-      to {
-        opacity: 1;
-        translate: 0 0;
-        scale: 1;
-      }
-    }
+    </script>
 
-    @media (max-width: 768px) {
+    <style is:global>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --font-family: "Outfit Variable", system-ui, sans-serif;
+        --primary: #f5f5f5;
+        --secondary: #3f50eb;
+        --dark: #13151a;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--font-family);
+        background: var(--dark);
+        background-size: 224px;
+      }
+
       main {
-        padding: 0 30px;
+        margin: 0 auto;
+        padding: 0 20px;
+        max-width: 1024px;
+        color: var(--primary);
+        font-size: 20px;
+        line-height: 1.6;
+        min-height: 70vh;
       }
 
-      h1,
       h2 {
-        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 35px;
       }
-    }
-  </style>
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      section.sub-section {
+        margin: 110px 0;
+      }
+
+      li {
+        list-style-type: none;
+      }
+
+      .btn {
+        width: 40%;
+        padding: 10px;
+        font-size: 1em;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        color: #0e0e0f;
+        background-color: #f3f3f3;
+        font-family: var(--font-family);
+        font-size: 1em;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .btn:hover {
+        background-color: var(--secondary);
+        color: var(--primary);
+      }
+
+      .shadow {
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+      }
+
+      body::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 10px;
+      }
+
+      body::-webkit-scrollbar-track {
+        background-color: #383737;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          translate: 0 50px;
+          scale: 0.7;
+        }
+        to {
+          opacity: 1;
+          translate: 0 0;
+          scale: 1;
+        }
+      }
+
+      @media (max-width: 768px) {
+        main {
+          padding: 0 30px;
+        }
+
+        h1,
+        h2 {
+          text-align: center;
+        }
+      }
+    </style>
+  </body>
 </html>
