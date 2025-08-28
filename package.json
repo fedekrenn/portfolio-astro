@@ -11,14 +11,14 @@
     "cloud": "cloudflared tunnel --url http://localhost:4321"
   },
   "dependencies": {
-    "@astrojs/check": "0.4.0",
-    "@astrojs/sitemap": "^3.0.5",
+    "@astrojs/check": "0.9.4",
+    "@astrojs/sitemap": "^3.5.1",
     "@fontsource-variable/outfit": "^5.0.8",
-    "astro": "4.16.19",
+    "astro": "5.13.4",
     "typescript": "5.3.3"
   },
   "devDependencies": {
-    "standard": "17.1.0"
+    "standard": "17.1.2"
   },
   "eslintConfig": {
     "extends": "standard"
