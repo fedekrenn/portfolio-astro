@@ -14,7 +14,7 @@
     "@astrojs/check": "0.9.4",
     "@astrojs/sitemap": "^3.5.1",
     "@fontsource-variable/outfit": "^5.0.8",
-    "astro": "5.13.10",
+    "astro": "5.15.6",
     "typescript": "5.3.3"
   },
   "devDependencies": {
