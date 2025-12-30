@@ -14,7 +14,7 @@
     "@astrojs/check": "0.9.4",
     "@astrojs/sitemap": "^3.5.1",
     "@fontsource-variable/outfit": "^5.0.8",
-    "astro": "5.15.9",
+    "astro": "5.16.6",
     "typescript": "5.3.3"
   },
   "devDependencies": {
@@ -22,5 +22,10 @@
   },
   "eslintConfig": {
     "extends": "standard"
+  },
+  "pnpm": {
+    "overrides": {
+      "mdast-util-to-hast": "13.2.1"
+    }
   }
 }
