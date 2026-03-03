@@ -14,7 +14,7 @@
     "@astrojs/check": "0.9.6",
     "@astrojs/sitemap": "^3.7.0",
     "@fontsource-variable/outfit": "^5.2.8",
-    "astro": "5.17.2",
+    "astro": "5.18.0",
     "typescript": "5.9.3"
   },
   "devDependencies": {
@@ -25,7 +25,11 @@
   },
   "pnpm": {
     "overrides": {
-      "lodash": "4.17.23"
+      "minimatch": "10.2.4",
+      "rollup": "4.59.0",
+      "devalue": "5.6.3",
+      "lodash": "4.17.23",
+      "ajv": "8.18.0"
     }
   }
 }
