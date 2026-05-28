@@ -11,21 +11,10 @@
     "cloud": "cloudflared tunnel --url http://localhost:4321"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.8",
-    "@astrojs/sitemap": "^3.7.2",
-    "@fontsource-variable/outfit": "^5.2.8",
-    "astro": "^6.1.6",
-    "typescript": "^5.9.3"
-  },
-  "devDependencies": {
-    "standard": "17.1.2"
-  },
-  "eslintConfig": {
-    "extends": "standard"
-  },
-  "pnpm": {
-    "overrides": {
-      "yaml": "2.8.3"
-    }
+    "@astrojs/check": "0.9.9",
+    "@astrojs/sitemap": "3.7.3",
+    "@fontsource-variable/outfit": "5.2.8",
+    "astro": "6.3.8",
+    "typescript": "6.0.3"
   }
 }
