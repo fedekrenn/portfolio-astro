@@ -1,20 +1,17 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Detail from "@components/Detail.astro";
-import { getById } from "@services/getData";
+import { getExperience } from "@services/getData";
 import type { Project } from "src/types/types";
 
 export function getStaticPaths() {
-  return [
-    { params: { id: "1" } },
-    { params: { id: "2" } },
-    { params: { id: "3" } },
-  ];
+  return getExperience().map((experience) => ({
+    params: { id: experience.id.toString() },
+    props: { experience },
+  }));
 }
 
-const { id } = Astro.params;
-
-const experience: Project = getById(Number(id));
+const { experience } = Astro.props as { experience: Project };
 ---
 
 <Layout
